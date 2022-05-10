@@ -9,7 +9,7 @@ function App() {
         <p>
           THE HACKED VERSION
         </p>
-        <p>We are still hacking it</p>
+        <p>We are still hacking</p>
       </header>
     </div>
   );
