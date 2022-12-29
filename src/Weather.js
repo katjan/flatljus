@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 const Weather = () => {
   const [weather, setWeather] = useState(null);
-  const WEATHER_KEY = process.env.REACT_APP_WEATHER_KEY
 
   useEffect(() => {
     const fetchWeather = async () => {
       const response = await fetch(
-        'https://api.openweathermap.org/data/2.5/weather?lat=68.4300824&lon=18.125392000000033&units=metric&appid='+WEATHER_KEY
+        'https://api.openweathermap.org/data/2.5/weather?lat=68.4300824&lon=18.125392000000033&units=metric&appid='+process.env.REACT_APP_WEATHER_KEY
       );
       const data = await response.json();
       console.log(process.env)
