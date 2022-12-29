@@ -1,6 +1,8 @@
 import logo from './riksgransen.png'
 import './App.css'
 import BusinessHours from './BusinessHours'
+import Weather from './Weather'
+import RiksgransenWeather from './RiksgransenWeather'
 
 function App () {
   return (
@@ -12,6 +14,7 @@ function App () {
         <img src={logo} className="App-logo" alt="logo"/>
       </header>
       <BusinessHours/>
+      <Weather/>
     </div>
 
   )
