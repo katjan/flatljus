@@ -15,7 +15,6 @@ function App () {
       </header>
       <BusinessHours/>
       <Weather/>
-      <RiksgransenWeather/>
     </div>
 
   )

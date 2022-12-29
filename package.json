@@ -9,6 +9,7 @@
     "express": "^4.16.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
     "react-snowfall": "^1.2.1",
     "utf8": "^3.0.0",

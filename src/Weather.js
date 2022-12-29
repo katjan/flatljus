@@ -1,8 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import {FaSun, FaCloud, FaCloudRain, FaQuestion } from "react-icons/fa";
+
 
 
 const Weather = () => {
   const [weather, setWeather] = useState(null);
+
+  const weatherIcons = {
+    'clear sky': <FaSun/>,
+    'few clouds': FaSun,
+    'overcast clouds': <FaCloud/>,
+    'scattered clouds': FaCloud,
+    'broken clouds': FaCloud,
+    'shower rain': FaCloudRain,
+    'rain': FaCloudRain,
+    'thunderstorm': FaCloudRain
+  };
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -21,9 +34,12 @@ const Weather = () => {
     return <div>Loading weather...</div>;
   }
 
+  const currentWeather = weather.weather[0].description;
+  const icon = weatherIcons[currentWeather] || FaQuestion;
+
   return (
     <div>
-      <h2>Weather in Riksgränsen, Sweden</h2>
+      <h2>{icon} Weather in Riksgränsen, Sweden {icon}</h2>
       <p>Temperature: {weather.main.temp}°C</p>
       <p>Description: {weather.weather[0].description}</p>
       <p>Visibility: {weather.visibility / 1000} km</p>
