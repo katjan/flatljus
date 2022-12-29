@@ -114,9 +114,11 @@ const BusinessHours = () => {
             {place.name}
           </h3>
           <ul className="business-hours__hours-list">
-            <li key={today} className="business-hours__hours-item">
-              {today}: {place.hours[today]}
-            </li>
+            {!expanded &&
+              <li key={today} className="business-hours__hours-item">
+                Today {place.hours[today]}
+              </li>
+            }
             {expanded &&
               Object.entries(place.hours).map(([day, hours]) => (
                 <li key={day} className="business-hours__hours-item">
