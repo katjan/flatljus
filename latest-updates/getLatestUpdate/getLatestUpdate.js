@@ -1,11 +1,12 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
-const { request } = require('express')
+import fetch from 'node-fetch';
+
+
 const handler = async (event) => {
   const fetchWeatherContent = async () => {
     try {
       const response = await fetch(
-        'https://riksgransen.se/skidakning/snorapport-och-pistkarta/',
-        { mode: 'no-cors'})
+        'https://riksgransen.se/skidakning/snorapport-och-pistkarta/')
       console.log(2, response)
 
       const html = await response.text()
