@@ -3,7 +3,7 @@ const { request } = require('express')
 const handler = async (event) => {
   const fetchWeatherContent = async () => {
     try {
-      const response = await request(
+      const response = await fetch(
         'https://riksgransen.se/skidakning/snorapport-och-pistkarta/',
         { mode: 'no-cors'})
       console.log(2, response)
