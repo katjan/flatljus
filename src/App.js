@@ -2,7 +2,6 @@ import logo from './riksgransen.png'
 import './App.css'
 import BusinessHours from './BusinessHours'
 import Weather from './Weather'
-import RiksgransenWeather from './RiksgransenWeather'
 
 function App () {
   return (
