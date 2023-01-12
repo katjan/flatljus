@@ -1,8 +1,9 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
+const { request } = require('express')
 const handler = async (event) => {
   const fetchWeatherContent = async () => {
     try {
-      const response = await fetch(
+      const response = await request(
         'https://riksgransen.se/skidakning/snorapport-och-pistkarta/',
         { mode: 'no-cors'})
       console.log(2, response)
@@ -18,10 +19,9 @@ const handler = async (event) => {
     }
   }
   try {
-    const subject = event.queryStringParameters.name || 'World'
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: fetchWeatherContent() }),
+      body: fetchWeatherContent(),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
