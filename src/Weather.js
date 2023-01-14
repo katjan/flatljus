@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {FaSun, FaCloud, FaCloudRain, FaQuestion } from "react-icons/fa";
+import {
+  FaSun,
+  FaCloud,
+  FaCloudRain,
+  FaQuestion,
+  FaSnowflake,
+} from 'react-icons/fa'
 
 
 
@@ -14,7 +20,8 @@ const Weather = () => {
     'broken clouds': FaCloud,
     'shower rain': FaCloudRain,
     'rain': FaCloudRain,
-    'thunderstorm': FaCloudRain
+    'thunderstorm': FaCloudRain,
+    'light snow': FaSnowflake,
   };
 
   useEffect(() => {

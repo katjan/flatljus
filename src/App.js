@@ -2,6 +2,7 @@ import logo from './riksgransen.png'
 import './App.css'
 import BusinessHours from './BusinessHours'
 import Weather from './Weather'
+import FetchHTML from './FetchHTML'
 
 function App () {
   return (
@@ -12,8 +13,11 @@ function App () {
         </p>
         <img src={logo} className="App-logo" alt="logo"/>
       </header>
+      <body>
       <BusinessHours/>
       <Weather/>
+      <FetchHTML/>
+      </body>
     </div>
 
   )
